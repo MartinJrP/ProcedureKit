@@ -33,6 +33,6 @@ extension SignpostObserver: ProcedureObserver {
     }
 
     public func did(finish procedure: Procedure, with error: Error?) {
-        os_signpost(.end, log: log, name: "Execution", signpostID: signpostID(for: procedure), "Procedure name: %{public}s, status: %{public}s", procedure.procedureName, procedure.status.rawValue)
+        os_signpost(.end, log: log, name: "Executing", signpostID: signpostID(for: procedure), "Procedure name: %{public}s, status: %{public}s", procedure.procedureName, procedure.status.rawValue)
     }
 }
